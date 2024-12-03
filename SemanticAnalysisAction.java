@@ -52,9 +52,13 @@ public class SemanticAnalysisAction implements ActionListener {
         }
 
         if (hasErrors) {
+            result.append("Semantic Analysis Failed!\n");
             compiler.getResultTextArea().setText(result.toString());
+            compiler.getSemanticAnalysisButton().setEnabled(false);
         } else {
-            compiler.getResultTextArea().setText(result.append("Semantic Analysis Successful!").toString());
+            result.append("Semantic Analysis Successful!\n");
+            compiler.getResultTextArea().setText(result.toString());
+            compiler.getSemanticAnalysisButton().setEnabled(false);
         }
     }
 

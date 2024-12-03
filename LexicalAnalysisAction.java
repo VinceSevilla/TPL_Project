@@ -42,10 +42,12 @@ public class LexicalAnalysisAction implements ActionListener {
         if (hasErrors) {
             compiler.getResultTextArea().setText(result.toString());
             compiler.getSyntaxAnalysisButton().setEnabled(false);
+            compiler.getLexicalAnalysisButton().setEnabled(false);
         } else {
             result.append("Lexical Analysis Successful!\n");
             compiler.getResultTextArea().setText(result.toString());
             compiler.getSyntaxAnalysisButton().setEnabled(true);
+            compiler.getLexicalAnalysisButton().setEnabled(false);
         }
 
         compiler.getSemanticAnalysisButton().setEnabled(false);

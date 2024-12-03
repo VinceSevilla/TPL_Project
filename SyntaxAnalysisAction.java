@@ -29,10 +29,12 @@ public class SyntaxAnalysisAction implements ActionListener {
             result.append("Syntax Analysis Failed!\n");
             compiler.getResultTextArea().setText(result.toString());
             compiler.getSemanticAnalysisButton().setEnabled(false);
+            compiler.getSyntaxAnalysisButton().setEnabled(false);
         } else {
             result.append("Syntax Analysis Successful!\n");
             compiler.getResultTextArea().setText(result.toString());
             compiler.getSemanticAnalysisButton().setEnabled(true);
+            compiler.getSyntaxAnalysisButton().setEnabled(false);
         }
     }
 }
